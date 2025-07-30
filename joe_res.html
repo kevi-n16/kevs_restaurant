@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JOE'S RESTAURANT</title>
+        <style>
+            body{
+                background-color: black;
+            }
+   
+            .nav1{
+                background-color: black;
+                text-align: center;
+                padding: 30px;
+                margin: -20px -20px 20px;
+                word-spacing: 10px;
+                display: block;
+                
+            }
+            .nav1 img{
+                height: 55px;
+                border-radius: 25px;
+                margin-right: 600px;
+                           }
+         
+            .nav1 button{
+                padding: 10px;
+                background-color: wheat ;
+                border-radius: 10PX;
+                color: black
+            }
+            
+            .form-container{
+                display: flex;
+                background-image: url(tasty-pizza-near-ingredients.jpg);
+                background-repeat: none;
+                background-size:cover;
+            }
+
+            .text h3{
+                font-family:cursive ;
+                font-size: 100px;
+            }
+            p{
+                font-size: 40px;
+            }
+    
+
+.order button{
+    padding: 10px;
+    background-color: blue;
+    border-radius: 10PX;
+    color:white;
+
+    
+}
+.pop-up{
+       
+      opacity: 0;
+      transform: scale(0.5);
+      animation: popIn 1s ease-out forwards;
+      font-size: 100pxpx;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    @keyframes popIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+
+}
+    }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <nav class="nav1">
+        <img src="#"/>
+          <a href="#" target="_blank"><button>HOME</button></a>
+          <a href="#"><button>CONTACT</button></a>
+          <a href="#"><button>SERVICES</button></a>
+          <a href="#"><button>BOOK A TABLE</button></a>
+          <a href="#"><button>ORDER NOW</button></a>
+        </nav>
+        <form class="form-container">
+            <div class="text">
+               <font color="white"> <h3>
+                <div class="pop-up">Enjoy Our Delicious Dishes</div></h3></font>
+                <font color="white"><p>Welcome to Joe's Restaurant </p></font>
+<div class="order">
+                  <a href="#"><button>ORDER NOW</button></a>
+                  </div>
+            </div>
+       
+        </form>
+    </body>
+</html>

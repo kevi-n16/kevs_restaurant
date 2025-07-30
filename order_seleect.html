@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ORDER SELECTION
+        </title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <style>
+            body{
+                background-color: white;
+            }
+            P{
+              text-align: center;
+              font-family: 'Poppins',sans-serif;
+              font-size: 25px;
+              font-style:oblique;
+              
+            }
+            .form-row{
+                border-radius: 15px;
+                box-shadow: -10px -10px 100px GOLD;
+                margin: auto;
+                padding: 30px;
+                width:500px;
+                background-color: white;
+                text-align: center;
+            }
+              .form-row select{
+                width: 7cm;
+                padding: 20px;
+                border-radius: 8px;
+                font-family: cursive;
+                font-size: 15px;
+                transition-delay: 3s;
+                text-align: center;
+                background-color: gold;
+               
+
+
+              }
+            
+             
+              .form-button input{
+                background-color: #3d3dff;
+                font-family: cursive;
+                padding: 15px;
+                border-radius: 8px;
+                font-size: 20px;
+                
+              }
+
+ 
+  .form-container p{
+    font-size: 20px;
+    font-family: cursive;
+    color: black;
+    text-align: center;
+  }
+
+  .form-button{
+    background-color: gold;
+    padding: 20px;
+    font-family: cursive;
+    border-radius: 7px;
+    width: 150px;
+  }
+
+  .form-container label{
+    font-family: cursive;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    display: block;
+  }
+  .form-container input{
+    padding: 20px;
+    border-radius: 7px;
+  }
+  .form-container input[placeholder="Enter your location"]{
+    font-family: cursive;
+  }
+  
+.form-container input[placeholder="Enter your phone number"]{
+font-family: cursive;
+}
+
+  
+         
+        </style>
+    </head>
+    <body>
+      <P>KINDLY FILL THE FORM AND YOUR MEAL WILL BE DELIVERED TO YOU, THANK YOU</p><BR><BR><BR>
+        <form action="https://formspree.io/f/xwpqqezz" method="post" class="form-container">
+          <div class="form-row">
+            <div class="p1">
+                 <p>PAYMENT ON DELIVERY ONLY </p>
+                 </div>
+
+                <label>SELECT YOUR MEAL</label>
+                <select name="MEAL">
+                  <option value="" disabled selected>SELECT A MEAL</option>
+                  <option>RICE AND EGGS - $40.00</option>
+                  <option>STAKE - $45.00 </option>
+                  <OPTION>SHRIMP SOUP - $60.00</OPTION>
+                  <option>SALAD - $30.00</option>
+                  <OPTION>YELLOW RICE - $60.00</OPTION>
+                  <option>RICE AND PORK - $85.00</option>
+                  <OPTION>RICE LEAF - $60.00</OPTION>
+                  <option>RICE AND SAUCE - $35.00</option>
+                  <OPTION>RICE AND CHICKEN - $60.OO</OPTION>
+                  </select><BR><BR>
+                <select name="DRINKS/JUICE">
+                  <option value="" disabled selected>SELECT A DRINK/JUICE</option>
+                  <option>MALT</option>
+                  <option>COCA COLA</option>
+                  <option>FANTA</option>
+                  <option>SPRITE</option>
+                  <option>ORANGE JUICE</option>
+                  <option>APPLE JUICE</option>
+                  <option>MINERAL WATER(BOTTLE)</option>
+                </select><BR><BR>
+                <label>PHONE NUMBER</label>
+                <input type="text" name="PHONE NUMBER" placeholder="Enter your phone number" required><BR><BR>
+              <label>LOCATION</label>
+                <input type="text" name="LOCATION" placeholder="Enter your location" required><BR><BR>
+
+
+                <input type="submit" value="SEND" class="form-button"> <input type="reset" value="RESET" class="form-button">
+             
+           
+
+            
+        </form>
+
+    </body>
+</html>

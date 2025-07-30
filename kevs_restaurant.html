@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            KEVS RESTAURANT 
+        </title>
+
+        <style>
+    body{
+        background-color: black;
+        color: white;
+      
+    }
+         .nav1{
+              
+                text-align:right;
+                padding: 30px;
+                margin: -20px -20px 20px;
+                word-spacing: 10px;
+                display: block;
+                
+                
+            }
+
+        .nav1 button{
+            color: black;
+            background-color: yellow;
+            padding: 10px;
+            border-radius:8px;
+            font-family: cursive;
+        }
+                
+
+    
+    .form-container h1{
+        text-align: center;
+        font-size: 60px;
+        font-family: cursive;
+           opacity: 0;
+    transform: scale(0.5);
+    animation: popIn 1s ease-out forwards;
+    font-size: 100pxpx;
+    text-align: center;
+    margin-top: 100px;
+    color: yellow;
+    text-shadow: -20px -20px 60px yellow;
+    }
+ .form-container h5{
+    font-size: 60px;
+    text-align: center ;
+    color: yellow;
+    font-weight: 400;
+    font-family: cursive;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popIn 1s ease-out forwards;
+    font-size: 100pxpx;
+    text-align: center;
+    margin-top: 100px;
+    text-shadow: -20px -20px 60px yellow;
+ }
+ @keyframes popIn{
+     to {
+        opacity: 1;
+        transform: scale(1);
+     }
+
+ }
+
+  .video-background {
+  position: relative;
+  height:fit-content;
+  overflow: hidden;
+}
+
+.video-background video {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  object-fit:fill;
+}
+.order-button{
+  text-align: center;
+}
+
+button{
+  background-color: yellow;
+  padding:20px;
+  font-family: cursive;
+  border-radius: 7px;
+
+  
+}
+
+
+
+ 
+
+        </style>
+    </head>
+    <body>
+      <nav class="nav1">
+        <img src="#"/>
+          <a href="kevs_restaurant.html" target="_blank"><button>HOME</button></a>
+          <a href="contact.html"><button>CONTACT</button></a>
+          <a href="order_page.html"><button>ORDER NOW</button></a>
+        </nav>
+          <div class="video-background">
+  <video autoplay muted loop playsinline>
+    <source src="Cinematic Restaurant Video - Sony FX3 & Sony GM 35mm f1.4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+        <form class="form-container">
+            <div class="h1">
+        <h1>WELCOME TO DIDI FRIEDRICE</h1>
+            </div>
+        <div class="p">
+        <h5>Enjoy Our Meal</h5>
+        </div>
+        </form>
+        <div class="order-button">
+        <a href="order_page.html"><button>ORDER NOW </button></a>
+        </div>
+    </body>
+</html>
