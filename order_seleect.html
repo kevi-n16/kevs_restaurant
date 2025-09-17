@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             ORDER SELECTION
         </title>
@@ -128,12 +130,17 @@ font-family: cursive;
                 <input type="text" name="LOCATION" placeholder="Enter your location" required><BR><BR>
 
 
-                <input type="submit" value="SEND" class="form-button"> <input type="reset" value="RESET" class="form-button">
-             
+                <input onclick="send()" type="submit" value="SEND" class="form-button"> <input type="reset" value="RESET" class="form-button">
            
 
             
         </form>
+          <script>
+              function send(){
+                alert("Thank you, your order will be delivered soon!");
+              }
+             </script>
+           
 
     </body>
 </html>
