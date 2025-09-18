@@ -95,7 +95,7 @@ font-family: cursive;
     </head>
     <body>
       <P>KINDLY FILL THE FORM AND YOUR MEAL WILL BE DELIVERED TO YOU, THANK YOU</p><BR><BR><BR>
-        <form action="https://formspree.io/f/xwpqqezz" method="post" class="form-container">
+        <form action="https://formspree.io/f/xwpqqezz" method="post" class="form-container" id="myform">
           <div class="form-row">
             <div class="p1">
                  <p>PAYMENT ON DELIVERY ONLY </p>
@@ -104,7 +104,7 @@ font-family: cursive;
                 <label>SELECT YOUR MEAL</label>
                 <select name="MEAL">
                   <option value="" disabled selected>SELECT A MEAL</option>
-                  <option>RICE AND EGGS - $40.00</option>
+                  <option >RICE AND EGGS - $40.00</option>
                   <option>STEAK - $45.00 </option>
                   <OPTION>SHRIMP SOUP - $60.00</OPTION>
                   <option>SALAD - $30.00</option>
@@ -125,20 +125,32 @@ font-family: cursive;
                   <option>MINERAL WATER(BOTTLE)</option>
                 </select><BR><BR>
                 <label>PHONE NUMBER</label>
-                <input type="text" name="PHONE NUMBER" placeholder="Enter your phone number" required><BR><BR>
+                <input id="phone" type="number"  name="PHONE NUMBER" placeholder="Enter your phone number" ><BR><BR>
               <label>LOCATION</label>
-                <input type="text" name="LOCATION" placeholder="Enter your location" required><BR><BR>
+                <input id="location" type="text"  name="LOCATION" placeholder="Enter your location"><BR><BR>
 
 
-                <input onclick="send()" type="submit" value="SEND" class="form-button"> <input type="reset" value="RESET" class="form-button">
+                <input  type="submit" value="SEND" class="form-button"> <input type="reset" value="RESET" class="form-button">
            
 
             
         </form>
           <script>
-              function send(){
-                alert("Thank you, your order will be delivered soon!");
-              }
+             document.getElementById("myform").addEventListener("submit", function(event){
+               if (!this.checkValidity()) {
+    return;
+  }
+      let phone = document.getElementById("phone").value.trim();
+      let location = document.getElementById("location").value.trim();
+  
+      if(phone === "" || location === ""){
+        alert("Please fill form");
+      } else {
+        alert("Thanks for the submission, order will be delivered soon");
+        this.sumbit();
+      }
+      
+    });
              </script>
            
 
