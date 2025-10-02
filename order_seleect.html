@@ -134,9 +134,9 @@ font-family: cursive;
         </form>
           <script>
              document.getElementById("myform").addEventListener("submit", function(event){
-               if (!this.checkValidity()) {
-    return;
-  }
+               event.preventDefault() ;
+    
+  
       let phone = document.getElementById("phone").value.trim();
       let location = document.getElementById("location").value.trim();
   
@@ -144,7 +144,7 @@ font-family: cursive;
         alert("Please fill form");
       } else {
         alert("Thanks for the submission, order will be delivered soon");
-        this.sumbit();
+        this.submit();
       }
       
     });

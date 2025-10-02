@@ -1,0 +1,12 @@
+{
+"version ": "0.2.0",
+"configuration" : [
+{
+    "type": "terminal",
+    "request": "run",
+    "name":"Open new.cpp",
+    "file":"C:\\Users\\user\\Desktop\\project html css JS\\new.cpp"
+
+}
+]
+}

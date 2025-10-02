@@ -158,6 +158,12 @@
           
            
         }
+        textarea{
+            width: 550px;
+            background-color: yellow;
+            border-radius: 7px;
+            height: 60px;
+        }
 
         </style>
       
@@ -167,7 +173,7 @@
         <div class="logo">
         <img src="restaurant logo.png" alt="LOGO"/>
         </div>
-          <a href="kevs_restaurant.html"><button>HOME</button></a>
+          <a href="Welcome_Page.html"><button>HOME</button></a>
           <a href="contact.html"><button>CONTACT</button></a>
           <a href="order_page.html"><button>ORDER NOW</button></a>
         </nav>
@@ -205,43 +211,61 @@
                 </div>
             </div>
   </form>
-            <form action="https://formspree.io/f/mrblllwk" method="post" class="form-container">
+            <form action="https://formspree.io/f/mrblllwk" method="post" class="form-container" id="myform">
       <div class="form-box">
             <div class="form-row1">
                 <div class="label1">
                     <label>FIRST NAME</label>
-                    <input type="text" name="FIRST NAME" size="30" maxlength="10" placeholder="FIRST">
+                    <input type="text" id="fname" name="FIRST NAME" size="30" maxlength="10" placeholder="FIRST">
                 </div>
                 <div class="label2">
                     <label>LAST NAME</label>
-                    <input type="text" name="LAST NAME" size="30" maxlength="10" placeholder="LAST">
+                    <input type="text" id="lname" name="LAST NAME" size="30" maxlength="10" placeholder="LAST">
                 </div>
                 </div>
                 <div class="form-row2">
                <div class="label3">
                     <label>EMAIL</label>
-                    <input type="email" name="EMAIL" size="30" maxlength="20" placeholder="example@gmail.com">
+                    <input type="email" name="EMAIL" id="mail" size="30" maxlength="20" placeholder="example@gmail.com">
                </div>
                <div class="label">
                     <label>TELEPHONE</label>
-                    <input type="tel" name="TELEPHONE" size="30" maxlength="20" placeholder="024175896">
+                    <input type="tel" name="TELEPHONE" id="phone" size="30" maxlength="20" placeholder="024175896">
                     </div>
                 </div>
 
                 <div class="form-row2">
                     <div class="label3">
                         <label>REMARKS/SUBJECT</label>
-                        <input type="text" name="REMARKS/SUBJECT" size="73" maxlength="1000"  >
+                        <textarea name="REMARKS/SUBJECT" id="remarks" size="73" maxlength="1000"  >
+                        </textarea>
                     </div>
                 </div><br><br>
                 <div class="form-row2">
                     <div class="submit">
-                <input  type="submit" value="SUBMIT">
+                <input type="submit" value="SUBMIT">
 
                     <input type="reset" value="RESET">
                 </div>
                 </div>
                 </div>
                 </DIV>
+                 <script>
+             document.getElementById("myform").addEventListener("submit", function(event){
+               event.preventDefault() ;
+  
+      let fname = document.getElementById("fname").value.trim();
+      let lname = document.getElementById("lname").value.trim();
+      let mail = document.getElementById("mail").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      if(fname === "" || lname === "" || mail === "" || phone===""){
+        alert("Please fill form");
+      } else {
+        alert("Thanks for the submission, order will be delivered soon");
+        this.submit();
+      }
+      
+    });
+             </script>
             </body>
 </html>
