@@ -6,33 +6,49 @@
         <title>
             DIDI FRIEDRICE CONTACT
         </title>
+        <link rel="icon" type="image/png" href="IMAGES & VIDS/restaurant_logo_64x64_yellow.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             body{
                 background-color: black;
 
             }
-        .nav1{
-           
-                text-align:right;
-                padding: 30px;
-                margin: -20px -20px 20px;
-                word-spacing: 10px;
-                display: flex;
-                margin-left: 1300px;
-                gap:20px;
-        }
-        .nav1 button{
-            color: black;
-            background-color: yellow;
-            padding:10px;
-            border-radius:8px;
-            font-family: cursive;
-            font-size: 15px;
-            border: 1px solid ;
-        }
+        .nav1 {
+  width: 100%;               
+  background-color:transparent;   
+  text-align: right;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end; 
+  gap: 20px;
+  position:sticky;           
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin: 0;                 
+}
+           .nav1 a {
+  text-decoration: none;
+  color: white;
+  font-family: cursive;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+
+.nav1 a:hover {
+  color: black;
+  background-color: yellow;
+}
+
+
+.nav1 a.active {
+  background-color: yellow;
+  color: black;
+}
         .logo img{
-          height: 50px;  
+          height: 70px;  
         }
         .h1{
             text-align: center;
@@ -159,10 +175,10 @@
            
         }
         textarea{
-            width: 550px;
+            width: 280%;
             background-color: yellow;
             border-radius: 7px;
-            height: 60px;
+            height: 100%;
         }
 
         </style>
@@ -171,11 +187,11 @@
     <body>
           <nav class="nav1">
         <div class="logo">
-        <img src="IMAGES & VIDS/restaurant logo.png" alt="LOGO"/>
+        <img src="IMAGES & VIDS/yellow_res.png" alt="LOGO"/>
         </div>
-          <a href="Welcome_Page.html"><button>HOME</button></a>
-          <a href="contact.html"><button>CONTACT</button></a>
-          <a href="order_page.html"><button>ORDER NOW</button></a>
+          <a href="Welcome_Page.html">HOME</a>
+          <a href="contact.html" class="active">CONTACT</a>
+          <a href="order_page.html">ORDER NOW</a>
         </nav>
       <div class="video-background">
   <video autoplay muted loop playsinline>
@@ -237,7 +253,7 @@
                 <div class="form-row2">
                     <div class="label3">
                         <label>REMARKS/SUBJECT</label>
-                        <textarea name="REMARKS/SUBJECT" id="remarks" size="73" maxlength="1000"  >
+                        <textarea name="REMARKS/SUBJECT" id="remarks" size="50" maxlength="500"  >
                         </textarea>
                     </div>
                 </div><br><br>
@@ -258,14 +274,27 @@
       let lname = document.getElementById("lname").value.trim();
       let mail = document.getElementById("mail").value.trim();
       let phone = document.getElementById("phone").value.trim();
-      if(fname === "" || lname === "" || mail === "" || phone===""){
+      let remarks = document.getElementById("remarks").value.trim();
+      if(fname === "" || lname === "" || mail === "" || phone==="" || remarks===""){
         alert("Please fill form");
       } else {
-        alert("Thanks for the submission, order will be delivered soon");
+        alert("Thanks!");
         this.submit();
       }
       
     });
+
+    const navLinks = document.querySelectorAll(".nav1 a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function() {
+      // Remove 'active' from all links
+      navLinks.forEach(l => l.classList.remove("active"));
+      
+      // Add 'active' to the clicked one
+      this.classList.add("active");
+    });
+  });
              </script>
             </body>
 </html>

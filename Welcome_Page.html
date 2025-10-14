@@ -6,6 +6,8 @@
         <title>
             KEVS RESTAURANT 
         </title>
+        <link rel="icon" type="image/png" href="IMAGES & VIDS/restaurant_logo_64x64_yellow.png">
+
 
         <style>
     body{
@@ -13,35 +15,51 @@
         color: white;
       
     }
-         .nav1{
-              
-                text-align:right;
-                padding: 30px;
-                margin: -20px -20px 20px;
-                margin-left:1100px;
-                word-spacing: 10px;
-                display: flex;
-                gap: 20px;
-                
-                
-            }
+           .nav1 {
+  width: 100%;               
+  background-color:transparent;   
+  text-align: right;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end; 
+  gap: 20px;
+  position:sticky;           
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin: 0;                 
+}
 
-        .nav1 button{
-            color: black;
-            background-color: yellow;
-            padding: 10px;
-            border-radius:8px;
-            font-family: cursive;
-        }
+       
+        .nav1 a {
+  text-decoration: none;
+  color: white;
+  font-family: cursive;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+
+.nav1 a:hover {
+  color: black;
+  background-color: yellow;
+  width: 100%;
+}
+
+
+.nav1 a.active {
+  background-color: yellow;
+  color: black;
+}
+
 
           
         
-        .logo{
-          text-align: left;
-        }
+        
         .logo img{
-          height: 50px;
-          
+          height: 80px;
+
         }
                 
 
@@ -52,7 +70,7 @@
         font-family: cursive;
            opacity: 0;
     transform: scale(0.5);
-    animation: popIn 1s ease-out forwards;
+    animation: popIn 2s ease-out forwards;
     font-size: 100pxpx;
     text-align: center;
     margin-top: 100px;
@@ -67,7 +85,7 @@
     font-family: cursive;
     opacity: 0;
     transform: scale(0.5);
-    animation: popIn 1s ease-out forwards;
+    animation: popIn 2s ease-out forwards;
     font-size: 100pxpx;
     text-align: center;
     margin-top: 100px;
@@ -104,28 +122,33 @@
 }
 
 button{
-  background-color: yellow;
+  background-color:white;
   padding:20px;
   font-family: cursive;
+ transition: all 0.3s ease; /* smooth animation */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* normal shadow */
   border-radius: 7px;
-
+  cursor:auto;
+  background-color: yellow;
   
 }
 
+button:hover{
+  transform: translateY(-25px) scale(1.30); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+   
 
-
- 
-
-        </style>
+}
+ </style>
     </head>
     <body>
       <nav class="nav1">
         <div class="logo">
-        <img src="IMAGES & VIDS/restaurant logo.png" alt="LOGO"/>
+        <img src="IMAGES & VIDS/yellow_res.png" alt="LOGO"/>
         </div>
-          <a href="kevs_restaurant.html" ><button>HOME</button></a>
-          <a href="contact.html"><button>CONTACT</button></a>
-          <a href="order_page.html"><button>ORDER NOW</button></a>
+          <a href="kevs_restaurant.html" class="active">HOME</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="order_page.html">ORDER NOW</a>
         </nav>
           <div class="video-background">
   <video autoplay muted loop playsinline>
@@ -144,4 +167,18 @@ button{
         <a href="order_page.html"><button>ORDER NOW </button></a>
         </div>
     </body>
+    <script>
+  const navLinks = document.querySelectorAll(".nav1 a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function() {
+      // Remove 'active' from all links
+      navLinks.forEach(l => l.classList.remove("active"));
+      
+      // Add 'active' to the clicked one
+      this.classList.add("active");
+    });
+  });
+</script>
+
 </html>

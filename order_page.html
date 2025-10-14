@@ -2,35 +2,54 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=9.0">
         <title>DIDI FRIEDRICE ORDER</title>
+        <link rel="icon" type="image/png" href="IMAGES & VIDS/restaurant_logo_64x64_yellow.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/brands.min.css" integrity="sha512-mXqwRsOznG7CS37KA7CLR1Fc72gfOgp7r8xaVdBKoBKhitcKI/mK+IamtZUf+FAkufXOvVTESu9lPsoQc+kFxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
         <style>
             body{
                 background-color:black;
             
             }
-             .nav1{
-                text-align:right;
-                padding: 30px;
-                margin: -20px -20px 20px;
-                word-spacing: 10px;
-                display: flex;
-                margin-left: 1450px;
-                gap:20px;
-        }
-        .nav1 button{
-            color: black;
-            background-color: yellow;
-            padding:10px;
-            border-radius:8px;
-            font-family: cursive;
-            font-size: 18px;
-            border:1px solid;
+             .nav1 {
+  width: 100%;               
+  background-color: transparent;   
+  text-align: right;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end; 
+  gap: 20px;
+  position:sticky;           
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;                 
+}
 
-        }
+
+        
+           .nav1 a {
+  text-decoration: none;
+  color: white;
+  font-family: cursive;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+
+.nav1 a:hover {
+  color: black;
+  background-color: yellow;
+}
+
+
+.nav1 a.active {
+  background-color: yellow;
+  color: black;
+}
         .logo img{
-          height: 50px;
+          height: 70px;
           
         }
             h1{
@@ -67,7 +86,7 @@
             height: 300px;
             border-radius: 7px;
             box-shadow: -10px -10px 15px yellow;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition:transform 0.3s ease, box-shadow 0.3s ease;
             }
                 @keyframes popUp {
       0%   { transform: scale(1); }
@@ -185,11 +204,11 @@
     <body>
          <nav class="nav1">
         <div class="logo">
-        <img src="IMAGES & VIDS/restaurant logo.png" alt="LOGO"/>
+        <img src="IMAGES & VIDS/yellow_res.png" alt="LOGO"/>
         </div>
-          <a href="Welcome_Page.html"><button>HOME</button></a>
-          <a href="contact.html"><button>CONTACT</button></a>
-          <a href="order_page.html"><button>ORDER NOW</button></a>
+          <a href="Welcome_Page.html">HOME</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="order_page.html" class="active">ORDER NOW</a>
         </nav>
         <div class="video-background">
   <video autoplay muted loop playsinline>
@@ -263,5 +282,19 @@
             <a href="order_seleect.html"><button>ORDER NOW</button></a></div>
             </div>
             </div>
+
+            <script>
+                 const navLinks = document.querySelectorAll(".nav1 a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function() {
+      // Remove 'active' from all links
+      navLinks.forEach(l => l.classList.remove("active"));
+      
+      // Add 'active' to the clicked one
+      this.classList.add("active");
+    });
+  });
+            </script>
  </body>
 </html>
